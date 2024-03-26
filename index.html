@@ -9,7 +9,9 @@
         .imgBlock img:first-child{
             width: 400px;
             height: 500px;
+            margin-top: 50px;
         }
+
     </style>
 </head>
 <body>
@@ -25,6 +27,10 @@
                 
                     <!-- Display selected image -->
                     <div id="imagePreview" class="imgBlock"></div>
+
+                    <!-- Conditional button -->
+                    <button id="editButton" class="btn btn-success d-none" onclick="rotateRight()">rotate right</button>
+
                 </div>
             </div>
         </div>
