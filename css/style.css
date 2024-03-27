@@ -1,0 +1,8 @@
+.imgBlock img:first-child{
+    width: 400px;
+    height: 500px;
+    margin-top: 50px;
+}
+body{
+    background-color: pink;
+}
