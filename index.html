@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>image editor</title>
+    <title>image editor by ishakose</title>
+    <link rel="icon" type="image/x-icon" href="images/filter.webp">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
@@ -12,16 +13,19 @@
         <div class="container">
             <div class="row my-5">
                 <div class="col-md-12">
-                    <h1>select image</h1>
+                    <h1 class="select-text text-center fw-bolder">IMAGE EDITOR - <span class="select-text text-center fw-bolder fs-6">mini project</span></h1>
 
-                    <label for="img">Select image:</label><br><br>
+                </div>
+                <div class="col-md-12 py-5">
+
+                    <label for="img" class="fw-bolder">Select image:</label><br><br>
                     <input type="file" id="img" name="img" accept="image/*">
-                    
-                    <input class="btn btn-primary" type="submit" onclick="getReadToEdit()" value="Submit">
+
+                    <input class="btn btn-danger" type="submit" onclick="getReadToEdit()" value="Submit">
 
                     <div class="row">
                         <!-- start Display selected image -->
-                        <div id="imagePreview" class="imgBlock col-md-6"></div>
+                        <div id="imagePreview" class="imgBlock col-md-6 "></div>
                         <!-- end Display selected image -->
 
 
@@ -29,21 +33,25 @@
                         <div class="col-md-6">
                             <div class="row">
                                 <div class="d-flex justify-content-between grid gap-0 py-5">
-                                    <button id="editButton" class="btn btn-success d-none p-2 g-col-6" onclick="rotateRight()">rotate right</button>
+                                    <button id="editButton" class="btn btn-success d-none p-2 g-col-6" onclick="rotateRight()">Rotate Right 📐</button>
 
-                                    <select id="filterSelect" class="form-select mb-3 d-none w-25 p-2 g-col-6" onchange="applyFilter()">
-                                        <option value="">Select Filter</option>
-                                        <option value="grayscale">Grayscale</option>
-                                        <option value="sepia">Sepia</option>
-                                        <option value="blur" >Blur</option>
-                                        <option value="brightness" >Brightness</option>
-                                        <option value="contrast" >contrast</option>
-                                        <option value="drop-shadow" >drop-shadow</option>
-                                        <option value="saturate" >saturate</option>
-                                        <option value="opacity" >opacity</option>
-                                        <option value="invert" >invert</option>
-                                        <option value="hue-rotate" >hue-rotate</option>
+                                    <!-- Add a button for downloading the edited image -->
+                                    <button id="downloadButton" class="btn btn-primary d-none" onclick="downloadImage()">Download Edited Image</button>
+
+                                    <select id="filterSelect" class="form-select mb-3 d-none w-25 p-2 g-col-6 " onchange="applyFilter()">
+                                        <option value="" class="text-dark" disabled>Select Filter</option>
+                                        <option value="grayscale" class="text-dark">Grayscale</option>
+                                        <option value="sepia" class="text-dark">Sepia</option>
+                                        <option value="blur" class="text-dark">Blur</option>
+                                        <option value="brightness" class="text-dark">Brightness</option>
+                                        <option value="contrast" class="text-dark">contrast</option>
+                                        <option value="drop-shadow" class="text-dark">drop-shadow</option>
+                                        <option value="saturate" class="text-dark">saturate</option>
+                                        <option value="opacity" class="text-dark">opacity</option>
+                                        <option value="invert" class="text-dark">invert</option>
+                                        <option value="hue-rotate" class="text-dark">hue-rotate</option>
                                     </select>
+
                                 </div>
                             </div>
                         </div>

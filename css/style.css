@@ -1,8 +1,38 @@
+*{
+    color: wheat;
+}
+
+/* starts image div decorate */
 .imgBlock img:first-child{
     width: 400px;
     height: 500px;
     margin-top: 50px;
+    align-items: center;
+    box-shadow: 0px 0px 30px whitesmoke;
 }
+/* end image div decorate */
+
+
+/* starts set background */
+@import url('https://fonts.googleapis.com/css?family=Barlow');
+
 body{
-    background-color: pink;
+    background: #310404 url(https://i.ytimg.com/vi/wOvQAhzWCrM/maxresdefault.jpg) no-repeat center center fixed !important; 
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	-o-background-size: cover !important;
+	background-size: cover !important;
+	font-family: 'Barlow', sans-serif !important;
 }
+/* end set background */
+
+
+/* start project title decorate */
+.select-text{
+    background: #FF0000;
+    background: linear-gradient(to right, #05C1FF 0%, #FFFF00 25%, #FF0000 50%, #FFFF00 75%, #FF0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* end project title decorate */
+
